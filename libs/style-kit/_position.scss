@@ -1,0 +1,23 @@
+.static {
+  position: static !important;
+}
+.relative {
+  position: relative !important;
+}
+.absolute {
+  position: absolute !important;
+}
+.fixed {
+  position: fixed !important;
+}
+
+$pos-val-map: (0, 50, 100);
+$pos-dir-map: (top, bottom, left, right);
+
+@each $keyV in $pos-val-map {
+  @each $keyD in $pos-dir-map {
+    .#{$keyD}-#{$keyV} {
+      #{$keyD}: $keyV * 1%;
+    }
+  }
+}

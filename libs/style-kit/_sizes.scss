@@ -1,0 +1,22 @@
+$dirMap: (width, height);
+$sizeMap: (
+  sm: 80px,
+  md: 160px,
+  lg: 400px,
+  xl: 600px,
+  full: 100%,
+  half: 50%,
+);
+@each $dir in $dirMap {
+  @each $sizeKey, $sizeVal in $sizeMap {
+    .#{$dir}-#{$sizeKey} {
+      #{$dir}: $sizeVal;
+    }
+    .min-#{$dir}-#{$sizeKey} {
+      min-#{$dir}: $sizeVal;
+    }
+    .max-#{$dir}-#{$sizeKey} {
+      max-#{$dir}: $sizeVal;
+    }
+  }
+}

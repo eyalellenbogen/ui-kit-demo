@@ -1,0 +1,64 @@
+$sizeMap: (
+  sm: 5px,
+  md: 10px,
+  lg: 15px,
+  xl: 20px,
+);
+$typeMap: (
+  m: margin,
+  p: padding,
+);
+$dirMap: (
+  t: top,
+  b: bottom,
+  l: left,
+  r: right,
+);
+
+.m-auto {
+  margin: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@each $sizeKey, $sizeVal in $sizeMap {
+  .m-#{$sizeKey} {
+    margin: $sizeVal;
+  }
+  .p-#{$sizeKey} {
+    padding: $sizeVal;
+  }
+  .mx-#{$sizeKey} {
+    margin-left: $sizeVal;
+    margin-right: $sizeVal;
+  }
+  .my-#{$sizeKey} {
+    margin-top: $sizeVal;
+    margin-bottom: $sizeVal;
+  }
+  .px-#{$sizeKey} {
+    padding-left: $sizeVal;
+    padding-right: $sizeVal;
+  }
+  .py-#{$sizeKey} {
+    padding-top: $sizeVal;
+    padding-bottom: $sizeVal;
+  }
+}
+@each $sizeKey, $sizeVal in $sizeMap {
+  @each $typeKey, $typeVal in $typeMap {
+    @each $dirKey, $dirVal in $dirMap {
+      .#{$typeKey}#{$dirKey}-#{$sizeKey} {
+        #{$typeVal}-#{$dirVal}: $sizeVal;
+      }
+    }
+  }
+}

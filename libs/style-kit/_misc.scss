@@ -1,0 +1,25 @@
+.border-none {
+  border: none;
+}
+.outline-none {
+  outline: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+$textAlignMap: (left, right, center);
+@each $k in $textAlignMap {
+  .text-align-#{$k} {
+    text-align: $k;
+  }
+}
+
+.border-round {
+  border-radius: 50%;
+}
+
+.db {
+  display: block;
+}

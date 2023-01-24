@@ -1,0 +1,18 @@
+@import "./theme/index";
+
+$colorMap: (
+  accent: $accent,
+  dark: $dark,
+  light: $light,
+  primary: $primary,
+  secondary: $secondary,
+);
+$typeMap: (color, background-color, border-color);
+
+@each $type in $typeMap {
+  @each $color, $val in $colorMap {
+    .#{$type}-#{$color} {
+      #{$type}: $val;
+    }
+  }
+}

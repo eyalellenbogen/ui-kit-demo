@@ -1,0 +1,9 @@
+@use '../common.scss' as c;
+
+.list-item {
+  @include c.listItem();
+}
+
+.icon {
+  margin-right: 10px;
+}

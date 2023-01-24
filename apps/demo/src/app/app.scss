@@ -1,0 +1,90 @@
+// /* Your styles goes here. */
+// @import '../../../../libs/style-kit/theme/index';
+// $background: $dark;
+// $headerHeight: 50px;
+// .app-container {
+//   height: 100vh;
+//   display: flex;
+
+//   aside {
+//     width: 260px;
+//     background-color: $background;
+//     color: #fff;
+//     .logo {
+//       width: 90%;
+//       margin: auto;
+//       text-align: center;
+//       padding: 20px 0;
+//       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+//       img {
+//         width: 60%;
+//         margin: auto;
+//       }
+//     }
+
+//     ul.menu {
+//       list-style-type: none;
+//       margin: 0;
+//       padding: 0;
+//       margin-top: 20px;
+//       font-size: 18px;
+//       li {
+//         padding: 10px 20px;
+//         cursor: pointer;
+//         position: relative;
+//         transition: all 0.2s;
+//         &:before {
+//           content: '';
+//           position: absolute;
+//           left: 0;
+//           top: 0;
+//           background-color: $background;
+//           width: 0;
+//           height: 100%;
+//           background-color: rgba(255, 255, 255, 0.1);
+//           transition: all 0.2s;
+//         }
+//         &.active,
+//         &:hover {
+//           padding-left: 25px;
+//           &:before {
+//             width: 100%;
+//           }
+//         }
+//         div {
+//           position: relative;
+//           z-index: 10;
+//           i {
+//             margin-right: 10px;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .main-content {
+//     box-sizing: border-box;
+//     flex: 1;
+//     .app-header {
+//       height: $headerHeight;
+//       background-color: #fff;
+//       box-sizing: border-box;
+//       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+//       .page-title {
+//         i {
+//           color: $accent;
+//           margin-right: 5px;
+//         }
+//         margin-left: 40px;
+//         font-size: 24px;
+//         line-height: $headerHeight;
+//       }
+//     }
+
+//     section.content {
+//       padding: 40px 40px 0 40px;
+//       flex: 1;
+//     }
+//   }
+// }

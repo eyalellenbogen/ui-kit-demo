@@ -1,0 +1,13 @@
+$map: (
+  up: 1.05,
+  down: 0.95,
+);
+
+@each $key, $val in $map {
+  .scale-#{$key} {
+    transform: scale($val);
+  }
+  .hover\:scale-#{$key}:hover {
+    transform: scale($val);
+  }
+}

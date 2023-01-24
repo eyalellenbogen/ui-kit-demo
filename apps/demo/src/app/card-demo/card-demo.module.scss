@@ -1,0 +1,10 @@
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 840px;
+  margin: auto;
+  margin-top:20px;
+  &__item {
+    margin: 0 20px 20px 0;
+  }
+}

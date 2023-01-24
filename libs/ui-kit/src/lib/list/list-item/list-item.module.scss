@@ -1,0 +1,4 @@
+@use '../common.scss' as c;
+.list-item {
+  @include c.listItem();
+}

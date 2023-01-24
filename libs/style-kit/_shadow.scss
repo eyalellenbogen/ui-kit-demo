@@ -1,0 +1,14 @@
+$map: (
+  light: 1px 1px 3px rgba(0, 0, 0, 0.2),
+  heavy: 2px 2px 5px rgba(0, 0, 0, 0.3),
+);
+@each $key, $val in $map {
+  .box-shadow-#{$key} {
+    box-shadow: $val;
+  }
+  .hover\:box-shadow-#{$key} {
+    &:hover {
+      box-shadow: $val;
+    }
+  }
+}

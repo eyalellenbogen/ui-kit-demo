@@ -1,0 +1,15 @@
+$pad: 20px;
+
+@mixin listItem() {
+  padding: 10px 12px;
+  transition: background-color 0.2s, padding 0.2s;
+  &--selected {
+    background-color: #c6deff;
+    padding-left: $pad;
+  }
+  &:hover:not(.list-item--selected),
+  &--focused:not(.list-item--selected) {
+    background-color: #e0e7f1;
+    padding-left: $pad;
+  }
+}
