@@ -1,22 +1,25 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react-hooks/exhaustive-deps */
-import { ForwardedRef, forwardRef, useEffect, useState } from 'react';
+import {
+  ForwardedRef,
+  forwardRef,
+  ReactNode,
+  useEffect,
+  useState,
+} from 'react';
 import { useForwardRef } from '../behaviors/use-forwardref';
 import styles from './list.module.scss';
 import { useKeyPress } from '../behaviors/use-key-press';
 
-export type ListItemType = {
-  label: string;
-};
-
 /* eslint-disable-next-line */
-export interface ListProps<T extends ListItemType> {
+export interface ListProps<T> {
   items: T[];
   onSelected?: (item: T) => void;
+  itemRenderer: (item: any) => ReactNode;
 }
 
-export const List = forwardRef(function List<T extends ListItemType>(
-  { items, onSelected }: ListProps<T>,
+export const List = forwardRef(function List<T>(
+  { items, onSelected, itemRenderer }: ListProps<T>,
   ref: ForwardedRef<HTMLDivElement>
 ) {
   const forwardedRef = useForwardRef(ref);
@@ -67,7 +70,7 @@ export const List = forwardRef(function List<T extends ListItemType>(
           onClick={() => selectItem(index)}
           key={index}
         >
-          {item.label}
+          {itemRenderer(item)}
         </div>
       ))}
     </div>

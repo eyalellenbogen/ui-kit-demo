@@ -34,8 +34,9 @@ export function ListDemo() {
     <div className={styles['container']}>
       <List
         ref={ref}
-        items={users.map((u) => ({ label: u.name }))}
+        items={users}
         onSelected={(item) => console.log('selected', item)}
+        itemRenderer={(user: User) => <>{user.name} - is the best!</>}
       ></List>
     </div>
   );
