@@ -7,19 +7,35 @@ export interface CardPropType {
 export function Card({ user }: CardPropType) {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   return (
-    <div className="user-card">
-      <div className="user-card__top">
-        <div className="user__avatar">
-          <img alt="" src={'/assets/images/' + user.avatar} />
+    <div
+      className="background-color-light 
+            box-shadow-heavy 
+            width-lg 
+            min-height-md 
+            hover:scale-up  transition-all-slow 
+            flex flex-column justify-between p-lg
+    "
+    >
+      <div className="flex">
+        <div className="width-sm height-sm background-color-dark border-round text-align-center p-md mr-lg mb-lg">
+          <img
+            className="height-full"
+            src={`/assets/images/${user.avatar}`}
+            alt="{ user.name }"
+          />
         </div>
-        <div className="user__info">
-          <div className="user__name">{user.name}</div>
-          <div className="user__email">{user.email}</div>
+        <div>
+          <div className="text-xl mb-sm">{user.name}</div>
+          <div>{user.email}</div>
         </div>
       </div>
-      <div className="user-card__bottom">
-        <button className="btn1">Delete</button>
-        <button className="btn2">Edit</button>
+      <div className="flex justify-end">
+        <button className="border-none outline-none background-color-light color-primary py-sm px-md text-align-center cursor-pointer ml-md font-size-md transition-all-fast hover:box-shadow-heavy">
+          Delete
+        </button>
+        <button className="border-none outline-none background-color-accent color-light py-sm px-md text-align-center cursor-pointer ml-md font-size-md transition-all-fast hover:box-shadow-heavy">
+          Edit
+        </button>
       </div>
     </div>
   );
